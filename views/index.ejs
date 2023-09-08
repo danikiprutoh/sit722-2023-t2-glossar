@@ -2,6 +2,31 @@
 <html>
 <head>
   <title>Glossary</title>
+  <style>
+    /* Define CSS classes for different colors */
+    .term { color: blue; }
+    .description { color: green; }
+    .reference { color: red; }
+
+    /* Define CSS for the table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 2px solid #ccc;
+      margin-top: 20px;
+      background-color: #f9f9f9;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #ddd;
+    }
+  </style>
 </head>
 <body>
   <h1>Glossary of Terms</h1>
@@ -13,9 +38,9 @@
     </tr>
     <% for (const term of glossaryData) { %>
       <tr>
-        <td><%= term.term %></td>
-        <td><%= term.description %></td>
-        <td><%= term.reference %></td>
+        <td class="term"><%= term.term %></td>
+        <td class="description"><%= term.description %></td>
+        <td class="reference"><%= term.reference %></td>
       </tr>
     <% } %>
   </table>
