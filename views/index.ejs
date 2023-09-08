@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Glossary</title>
+</head>
+<body>
+  <h1>Glossary of Terms</h1>
+  <table>
+    <tr>
+      <th>Term</th>
+      <th>Description</th>
+      <th>Reference</th>
+    </tr>
+    <% for (const term of glossaryData) { %>
+      <tr>
+        <td><%= term.term %></td>
+        <td><%= term.description %></td>
+        <td><%= term.reference %></td>
+      </tr>
+    <% } %>
+  </table>
+</body>
+</html>
